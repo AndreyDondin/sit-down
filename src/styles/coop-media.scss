@@ -1,0 +1,63 @@
+@media (max-width: 1050px) {
+  .coop {
+    &__grid-container {
+      grid-template-columns: repeat(9, 1fr);
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .coop {
+    &__grid-container {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .coop {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+
+    &__info {
+      padding: 0 52px;
+      font-size: 16px;
+    }
+
+    &__text--margin {
+      margin-bottom: 12px;
+    }
+
+    &__grid-block--row3 h2 {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &__grid-block--row4 h2 {
+      margin-bottom: 8px;
+    }
+
+    &__item-number {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+
+    &__info {
+
+      &::before {
+        content: url('../img/coop__info-background-320.webp');
+      }
+    }
+  }
+}

@@ -1,0 +1,457 @@
+@import 'general.scss';
+@import '_variables.scss';
+@import '_mixin.scss';
+@import 'header.scss';
+@import 'footer.scss';
+
+.card {
+  margin-bottom: 81px;
+
+  &__main-title {
+    visibility: hidden;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr) 32px repeat(6, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+
+  &__img-wrap {
+    grid-column: 1/7;
+    grid-row: 1/2;
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+
+  &__img-wrap &__img {
+    display: block;
+    margin: 0 auto;
+    max-height: 245px;
+  }
+
+  &__img-wrap-more {
+    grid-column: 1/7;
+    grid-row: 2/3;
+    margin-bottom: 32px;
+    max-height: 245px;
+    cursor: pointer;
+    background-color: $color-light-gray;
+    border-radius: 10px;
+  }
+
+  &__img-wrap-more &__img {
+    margin: 0 auto;
+    max-height: 81px;
+  }
+
+  &__swiper-slide {
+    display: flex;
+    align-items: center;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper {
+    z-index: 0;
+  }
+
+  .swiper-wrapper {
+    z-index: 0;
+  }
+
+  &__decs {
+    grid-column: 1/7;
+    grid-row: 3/4;
+    margin-bottom: 105px;
+  }
+
+  &__img-wrap-instruction {
+    grid-column: 1/7;
+    grid-row: 4/5;
+  }
+
+  &__content {
+    display: flex;
+    grid-column: 8/12;
+    grid-row: 1/2;
+    padding-top: 14px;
+    flex-direction: column;
+  }
+
+  &__info-box {
+    padding-top: 3px;
+    padding-left: 15px;
+    grid-column: 11/13;
+    grid-row: 3/5;
+  }
+
+  &__info-block {
+    padding-top: 3px;
+    grid-column: 8/11;
+    grid-row: 3/5;
+  }
+
+  &__info-block &__info-block-desc {
+    display: none;
+  }
+
+  &__subject {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: $color-black;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 180%;
+    color: $color-black;
+  }
+
+  &__text--mg {
+    margin-bottom: 8px;
+  }
+
+  &__rating {
+    margin-bottom: 2px;
+    font-size: 16px;
+    line-height: 130%;
+    color: $color-orange;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    color: $color-black;
+  }
+
+  &__headline {
+    margin-bottom: 21px;
+    font-size: 14px;
+    line-height: 100%;
+    color: $color-gray;
+  }
+
+  &__price {
+    margin-bottom: 21px;
+    font-size: 36px;
+    line-height: 130%;
+    color: $color-black;
+  }
+
+  &__btn {
+    margin-bottom: 12px;
+    padding: 19px 35px;
+    width: fit-content;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: $color-white;
+    background-color: $color-violet;
+    border-radius: 10px;
+  }
+
+  &__button-add {
+    padding: 0 30px;
+    width: fit-content;
+    font-size: 16px;
+    line-height: 130%;
+    color: $color-violet;
+  }
+
+
+  &__info-block-features {
+    display: flex;
+    font-size: 14px;
+    line-height: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    }
+  }
+
+  &__info-block-sub {
+    white-space: nowrap;
+    color: $color-gray;
+  }
+
+  &__info-block-row {
+    margin-right: -15px;
+    width: 100%;
+    border-bottom: 1px dotted $color-gray;
+  }
+
+  &__info-block-desc {
+    white-space: nowrap;
+    color: $color-black;
+  }
+
+  //modal buy
+  &__modal-wrap {
+    display: flex;
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 624px;
+    position: relative;
+    flex-direction: column;
+    background-color: $color-white;
+    border-radius: 10px;
+  }
+
+  &__modal-btn-line {
+    width: 100%;
+    height: 1px;
+    background-color: $color-dark-gray;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+  }
+
+  &__modal-btn-line--transform1 {
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg);
+  }
+
+  &__modal-btn-line--transform2 {
+    position: absolute;
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+
+  &__modal-title {
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    color: $color-black;
+  }
+
+  &__modal-text {
+    margin-bottom: 30px;
+    max-width: 374px;
+    font-size: 14px;
+    line-height: 19px;
+    color: $color-black;
+  }
+
+  &__modal-label {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__modal-input {
+    margin-bottom: 30px;
+    padding: 7px 18px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 40px;
+    color: $color-black;
+    border: none;
+    border-radius: 10px;
+    background-color: $color-light-gray;
+
+    @include inputForm();
+
+    &::placeholder {
+      color: $color-gray;
+    }
+  }
+
+  .just-validate-success-field {
+    border: 1px solid #B8EC64;
+  }
+
+  .is-invalid {
+    border: 1px solid #FF6972;
+  }
+
+  &__modal-btn {
+    display: block;
+    margin-bottom: 12px;
+    padding: 19px 35px;
+    font-weight: 600;
+  }
+
+  &__modal-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+  &__modal-label-check>&__modal-copyright::before {
+    content: '';
+    display: inline-block;
+    margin-right: 8px;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    border: 1px solid #adb5bd;
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+
+  &__modal-checkbox:checked+&__modal-copyright::before {
+    background-image: url('../img/sprite/feedback__check.svg');
+    border-color: $color-violet;
+    background-color: $color-violet;
+  }
+
+
+  &__modal-copyright {
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 19px;
+    color: $color-black;
+  }
+
+  &__modal-link {
+    color: $color-violet;
+  }
+
+  //modal callback
+  &__modal-wrap-callback {
+    display: flex;
+    margin: 0 auto;
+    padding: 118px 75px;
+    max-width: 624px;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $color-white;
+    border-radius: 10px;
+  }
+
+  &__modal-callback-img {
+    margin: 0 auto 32px auto;
+  }
+
+  &__modal-callback-title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    color: $color-black;
+  }
+
+  //modal swiper
+  &__modal-wrap-images {
+    position: relative;
+    background-color: $color-white;
+    border-radius: 10px;
+  }
+
+  &__modal-swiper-main img {
+    display: block;
+    margin: 0 auto;
+    max-height: 418px;
+  }
+
+  &__modal-images-img-wrap {
+    padding-top: 50px;
+  }
+
+  &__modal-images-img {
+    display: block;
+    margin-bottom: 50px;
+    padding: 0 107px;
+  }
+
+  &__modal-images-btn-swiper-left {
+    display: none;
+    position: absolute;
+    left: 16px;
+    top: 67px;
+    z-index: 5;
+    transform: rotate(180deg);
+  }
+
+  &__modal-images-btn-swiper-right {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 67px;
+    z-index: 5;
+  }
+
+  &__modal-images-swiper {
+    padding: 20px 51px;
+    background-color: $color-light-gray;
+    border-radius: 0 0 10px 10px;
+  }
+
+  &__modal-images-slide-img2 {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__modal--active {
+    display: block;
+  }
+}
+
+.same {
+  &__title {
+    margin-bottom: 24px;
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  &__title-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn-left {
+    margin-right: 13px;
+    transform: rotate(180deg);
+  }
+
+  &__btn-icon {
+    stroke: $color-gray;
+  }
+
+  &__card {
+    display: flex;
+    padding: 30px;
+    max-width: 236px;
+    min-height: 360px;
+    flex-direction: column;
+    justify-content: end;
+    background-color: $color-light-gray;
+    border-radius: 10px;
+  }
+
+  &__rating {
+    margin-bottom: auto;
+    font-size: 16px;
+    line-height: 130%;
+    color: $color-orange;
+  }
+
+  &__img-wrap {
+    display: flex;
+    margin: 0 -30px 16px -30px;
+    justify-content: center;
+  }
+
+  &__subtitle {
+    margin-bottom: 0;
+  }
+
+  &__price {
+    display: block;
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 130%;
+    color: $color-dark-gray;
+  }
+}

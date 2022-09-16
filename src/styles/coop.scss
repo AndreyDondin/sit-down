@@ -1,0 +1,125 @@
+@import 'general.scss';
+@import '_variables.scss';
+@import '_mixin.scss';
+@import 'header.scss';
+@import 'footer.scss';
+
+.coop {
+
+  &__title {
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    color: $color-black;
+  }
+
+  &__grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, auto);
+    row-gap: 32px;
+  }
+
+  &__subtitle {
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: $color-black;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 180%;
+    color: $color-dark-gray;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__item-icon {
+    margin-right: 12px;
+    float: left
+  }
+
+  &__subject {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-orange;
+  }
+
+  &__list-number {
+    margin: 0;
+    padding-left: 15px;
+    list-style-position: outside;
+    font-size: 16px;
+    line-height: 180%;
+    color: $color-orange;
+  }
+
+  &__item-number {
+    padding-left: 12px;
+
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__info {
+    padding: 22px 0 22px 109px;
+    position: relative;
+    font-size: 24px;
+    line-height: 150%;
+    color: $color-black;
+
+    &::before {
+      content: url('../img/coop__info-background.webp');
+      position: absolute;
+      top: 0px;
+      left: 0;
+    }
+  }
+
+  &__text--margin {
+    margin-bottom: 14px;
+  }
+
+  &__grid-block--row1 {
+    grid-column: 1/9;
+    grid-row: 1/2;
+  }
+
+  &__grid-block--row2 {
+    grid-column: 1/7;
+    grid-row: 2/3;
+  }
+
+  &__grid-block--row2 p {
+    overflow: hidden;
+    line-height: 150%;
+  }
+
+  &__grid-block--row3 {
+    grid-column: 1/9;
+    grid-row: 3/4;
+  }
+
+  &__grid-block--row4 {
+    grid-column: 1/9;
+    grid-row: 4/5;
+  }
+
+  &__grid-block--row5 {
+    grid-column: 1/7;
+    grid-row: 5/6;
+  }
+
+
+}

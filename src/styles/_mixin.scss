@@ -1,0 +1,203 @@
+@import '_variables.scss';
+
+@mixin btnWithBackground {
+  &:hover {
+    background-color: $color-light-violet;
+  }
+
+  &:focus {
+    background-color: $color-light-violet;
+    outline-color: $color-dark-violet;
+  }
+
+  &:active {
+    background-color: $color-dark-violet;
+  }
+
+  &:disabled {
+    color: $color-gray;
+    background-color: #eaeaea;
+  }
+}
+
+@mixin btnWithoutBackground {
+  &:hover {
+    color: $color-white;
+    background-color: $color-violet;
+  }
+
+  &:focus {
+    color: $color-white;
+    background-color: $color-light-violet;
+  }
+
+  &:active {
+    background-color: $color-dark-violet;
+    border-color: $color-dark-violet;
+  }
+}
+
+@mixin link-gray {
+  &:hover {
+    color: $color-violet;
+  }
+
+  &:focus {
+    outline: none;
+    color: $color-dark-violet;
+    background: #EBD1FF;
+  }
+
+  &:active {
+    color: $color-dark-violet;
+    background: none;
+  }
+}
+
+@mixin link-black {
+  &:hover {
+    color: $color-violet;
+  }
+
+  &:focus {
+    outline: none;
+    color: $color-black;
+    background: #EBD1FF;
+  }
+
+  &:active {
+    color: $color-dark-violet;
+    background: none;
+  }
+}
+
+@mixin btnArrow {
+
+  &:not([disabled]) {
+    &:hover circle {
+      fill: $color-violet;
+    }
+
+    &:hover path {
+      stroke: $color-white;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus circle {
+      fill: $color-light-violet;
+    }
+
+    &:focus path {
+      stroke: $color-white;
+    }
+
+    &:active circle {
+      fill: $color-dark-violet;
+      stroke: $color-dark-violet;
+    }
+
+    &:active path {
+      stroke: $color-white;
+    }
+
+
+  }
+
+  &:disabled circle {
+    stroke: $color-gray;
+  }
+
+  &:disabled path {
+    stroke: $color-gray;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+
+}
+
+@mixin socialIcon {
+  &:hover path {
+    fill: $color-violet;
+  }
+
+  &:focus rect {
+    fill: $color-light-violet;
+  }
+
+  &:focus path {
+    fill: $color-white;
+  }
+
+  &:active path {
+    fill: $color-dark-violet;
+  }
+
+  &:active rect {
+    fill: transparent;
+  }
+}
+
+@mixin input {
+  &:hover {
+    background-color: #eaeaea;
+  }
+
+  &:focus {
+    background-color: #F8EFFF;
+    outline-color: $color-violet;
+  }
+
+  &:active {
+    outline: none;
+    background-color: $color-light-gray;
+  }
+}
+
+@mixin userBtn {
+  &:hover svg {
+    fill: $color-light-violet;
+  }
+
+  &:focus {
+    background-color: $color-light-violet;
+    outline: none;
+  }
+
+  &:focus svg {
+    fill: $color-white;
+  }
+
+  &:active {
+    background-color: transparent;
+  }
+
+  &:active svg {
+    fill: $color-dark-violet;
+  }
+}
+
+@mixin inputForm {
+  &:hover {
+    background-color: #eaeaea;
+  }
+
+  &:focus {
+    background-color: #F8EFFF;
+    outline-color: $color-violet;
+  }
+
+  // &:active {
+  //   outline-color: #B8EC64;
+  //   background-color: $color-light-gray;
+  // }
+
+  &:invalid {
+    outline-color: #FF6972;
+    background-color: $color-light-gray;
+  }
+}
